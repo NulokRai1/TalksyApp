@@ -1,0 +1,6 @@
+@TalksyApp_HostAddress = http://localhost:5204
+
+GET {{TalksyApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

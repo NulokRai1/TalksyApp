@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalksyApp", "TalksyApp.csproj", "{AB0BA6B5-8667-D45A-D6D4-9EAED2A22591}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB0BA6B5-8667-D45A-D6D4-9EAED2A22591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB0BA6B5-8667-D45A-D6D4-9EAED2A22591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB0BA6B5-8667-D45A-D6D4-9EAED2A22591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB0BA6B5-8667-D45A-D6D4-9EAED2A22591}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6EEB4C61-B380-4B00-9632-FD1748A18963}
+	EndGlobalSection
+EndGlobal
