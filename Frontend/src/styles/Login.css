@@ -1,0 +1,145 @@
+.login-page{
+    height: 100vh;
+    background: linear-gradient(to right, #001AAB, #6980FF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.login-info{
+    width: 40vw;
+    height: 70vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.info-header{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    margin-bottom: 35px;
+}
+
+.sub-head{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.info-body{
+    font-size: 16px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.login-container{
+    height: 70vh;
+    width: 30vw;
+    background-color: #ECE9FF;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+.login-container h1{
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.login-input{
+    padding: 10px;
+    height: 40px;
+    width: 250px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+#login-logo{
+    height: 200px;
+    width: 250px;
+    object-fit: contain;
+}
+
+
+.login-button{
+    background-color: #5771FF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-family:'Arial, Helvetica, sans-serif';
+}
+
+.or{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: gray;
+    width: 250px;
+    font-family:'Arial, Helvetica, sans-serif';
+}
+
+.or::before, .or::after{
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid gray;
+    margin: 0 10px;
+}
+
+.other-link{
+    height: 30px;
+    width: 30px;
+}
+
+#signing{
+    text-decoration: none;
+    color: #5771FF;
+}
+
+.login-container p {
+    font-family:'Arial, Helvetica, sans-serif';
+    text-align: center;
+    margin-top: 10px;
+}
+
+.register-container{
+    height: 80vh;
+    width: 30vw;
+    background-color: #ECE9FF;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+#forgot-password{
+    text-decoration: none;
+    color: rgb(78, 77, 77);
+}
+
+.login-google-button{
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-family:'Arial, Helvetica, sans-serif';
+}
