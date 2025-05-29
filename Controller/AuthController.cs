@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Azure;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MyApp.Entities;
 using MyApp.Models;
 using MyApp.Services;
+using System.Security.Claims;
 
 
 namespace MyApp.Controllers
@@ -20,11 +23,11 @@ namespace MyApp.Controllers
 		//public async Task<ActionResult<User>> Register(User request)
 		public async Task<ActionResult<string>> Register(UserRegisterDto request)
 		{
-			var user = await _authService.RegisterAsync(request);
-			if (user is null)
-				return BadRequest("Username already exists.");
+			var response = await _authService.RegisterAsync(request);
+			if (!response.Success)
+				return BadRequest("User already exists.");
 
-			return Ok("user");
+			return Ok(response);
 		}
 
 		[HttpPost("login")]
@@ -32,11 +35,27 @@ namespace MyApp.Controllers
 		public async Task<ActionResult<string>> Login(UserLoginDto request)
 
 		{
-			var result = await _authService.LoginAsync(request);
-			if (result is null)
+			var response = await _authService.LoginAsync(request);
+			if (!response.Success)
 				return BadRequest("Invalid username or password.");
 
-			return Ok("success");
+			return Ok(response);
 		}
+
+		[Authorize]
+		[HttpGet("profile")]
+		public IActionResult GetProfile()
+		{
+			var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+			if (userId == null)
+			{
+				return Unauthorized();
+			}
+
+			// Now you can use userId to fetch user info, messages, etc.
+			return Ok(new { UserId = userId });
+		}
+
 	}
 }
